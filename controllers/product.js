@@ -3,15 +3,8 @@ const Product = require("../models/product");
 const Category = require("../models/category");
 
 exports.postProduct = async (req, res, next) => {
-  let {
-    name,
-    description,
-    image,
-    category,
-    quantity,
-    price,
-    status,
-  } = req.body;
+  let { name, description, image, category, quantity, price, status } =
+    req.body;
   name = name.trim();
   description = description.trim();
   image = image.trim();
@@ -64,15 +57,8 @@ exports.postProduct = async (req, res, next) => {
 exports.patchProduct = async (req, res, next) => {
   const { id } = req.params;
 
-  let {
-    name,
-    description,
-    image,
-    category,
-    quantity,
-    price,
-    status,
-  } = req.body;
+  let { name, description, image, category, quantity, price, status } =
+    req.body;
   name = name.trim();
   description = description.trim();
   image = image.trim();

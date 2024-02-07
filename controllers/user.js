@@ -2,7 +2,8 @@ const { errorHandler } = require("../utils");
 const User = require("../models/user");
 const jwt = require("jsonwebtoken");
 
-const regex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+const regex =
+  /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
 exports.postSignup = async (req, res, next) => {
   let { name, email, password } = req.body;
